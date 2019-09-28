@@ -57,7 +57,7 @@ public class DestroyBall : MonoBehaviour
             launcherScript = launcherObj.GetComponent<Launcher>();
         }
     }
-
+/*
     void OnTriggerEnter(Collider col)
     {
         Debug.Log(col.tag);
@@ -67,7 +67,9 @@ public class DestroyBall : MonoBehaviour
             SceneManager.LoadScene("Exit");
         }
     }
-   /* void OnTriggerEnter2D(Collider2D obj)
+
+        */
+    void OnTriggerEnter2D(Collider2D obj)
     {
         if (obj.name == "ball")
         {
@@ -76,7 +78,7 @@ public class DestroyBall : MonoBehaviour
             sound.die.Play();
         }
     }
-*/
+
     void OnTriggerExit2D(Collider2D obj)
     {
         if (obj.name == "ball" && launcherScript != null)

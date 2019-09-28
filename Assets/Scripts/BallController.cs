@@ -30,7 +30,7 @@
 
 using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class BallController : MonoBehaviour
 {
  
@@ -48,6 +48,16 @@ public class BallController : MonoBehaviour
         {
             soundFlag = true;
             sound.Play();
+        }
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        Debug.Log(col.tag);
+
+        if (col.tag == "ball")
+        {
+            SceneManager.LoadScene("Exit");
         }
     }
 
